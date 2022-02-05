@@ -49,7 +49,7 @@ puts
 puts "3."
 def simple_grep(filename, pattern)
   lines = File.readlines(filename, chomp: true)
-  lines.each {|line| puts "Matched #{pattern} on line: '#{line}'" if line.match(pattern)}
+  lines.each {|line| puts "Matched #{pattern} on line: '#{line}'" if line.match?(pattern)}
 end
 
 simple_grep("test.txt", "orld")
